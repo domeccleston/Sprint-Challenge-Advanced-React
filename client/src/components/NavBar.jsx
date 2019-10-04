@@ -4,8 +4,6 @@ import { Segment, Checkbox } from 'semantic-ui-react';
 
 const Navbar = () => {
     const [darkModeNew, setDarkModeNew] = useDarkMode(true)
-    console.log(darkModeNew)
-  
     return (
       <nav className="navbar">
         <h1>Women's World Cup players</h1>

@@ -5,7 +5,6 @@ import '../App.scss'
 const testVar = 0;
 
 const PlayersTable = ({data}) => {
-    console.log(data)
     return (
         <Table className="players-table" celled striped>
             <Table.Header>
