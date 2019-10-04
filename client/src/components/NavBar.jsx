@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDarkMode } from '../hooks/hooks.jsx';
+import { Segment, Checkbox } from 'semantic-ui-react';
 
 const Navbar = () => {
     const [darkModeNew, setDarkModeNew] = useDarkMode(true)
@@ -8,12 +9,9 @@ const Navbar = () => {
     return (
       <nav className="navbar">
         <h1>Women's World Cup players</h1>
-        <div className="dark-mode__toggle">
-         <div data-testid="darkmode-toggle"
+         <Checkbox toggle data-testid="darkmode-toggle" className="toggle"
             onClick={setDarkModeNew}
-            className={darkModeNew ? 'toggle toggled' : 'toggle'}
           />
-        </div>
       </nav>
     );
   };

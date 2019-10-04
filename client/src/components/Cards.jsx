@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
+import { Table } from 'semantic-ui-react';
 import Card from './Card'
+
+ 
+/*             this.props.data.map((player, index) => (
+                <Card player={player} id={index}/>
+)) */
 
 class Cards extends Component {
     constructor(props) {
@@ -7,11 +13,9 @@ class Cards extends Component {
     }
     render() { 
         console.log(this.props.data)
-        return (    
-            this.props.data.map((player, index) => (
-                <Card player={player} id={index}/>
-             ))
-        );
+        return (   
+            <div></div>
+        )
     }
 }
  

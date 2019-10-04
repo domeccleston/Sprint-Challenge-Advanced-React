@@ -56,8 +56,10 @@ export const useDarkMode = (initialValue) => {
   useEffect(() => {
     if (darkModeState === true) {
       document.body.classList.add("dark-mode")
+      document.body.querySelector('table').classList.add("inverted")
     } else {
       document.body.classList.remove("dark-mode")
+      document.body.querySelector('table').classList.remove("inverted")
     }
   }, [darkModeState])
 

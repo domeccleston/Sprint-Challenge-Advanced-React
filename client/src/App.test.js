@@ -34,6 +34,14 @@ describe('localhost:5000 api endpoint is functioning and returns list of players
 
 describe('dark mode toggle is functioning', () => {
   it('should be able to switch background colors on click', () => {
-    
+    const darkModeButton = tools.queryByTestId('darkmode-toggle')
+
+    expect(darkModeButton).toBeInTheDocument();
+
+    expect(document.body.classList.contains('dark-mode')).not.toBeTruthy()
+
+    rtl.fireEvent.click(darkModeButton)
+
+    expect(document.body.classList.contains('dark-mode')).toBeTruthy()
   })
 })

@@ -3,6 +3,9 @@ import axios from "axios";
 import "./App.scss";
 import Cards from "./components/Cards";
 import NavBar from "./components/NavBar";
+import PlayersTable from "./components/Table";
+import DarkTable from "./components/DarkTable"
+import 'semantic-ui-css/semantic.min.css'
 
 /* function App() {
   return (
@@ -25,14 +28,12 @@ class App extends Component {
       .get(`http://localhost:5000/api/players`)
       .then(res => this.setState({ data: res.data }));
   }
-
   render() {
-    console.log(this.state.data);
 
     return (
       <div className="home">
         <NavBar />
-        <Cards data={this.state.data} />
+        <PlayersTable data={this.state.data}/>
       </div>
     );
   }

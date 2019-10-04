@@ -23,9 +23,35 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit the `ANSWERS.md` file to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] Why would you use class component over function components (removing hooks from the question)?
+
+React Hooks are a recent introduction to React, and the documentation on the ReactJS website still focuses 
+primarily on class components. As such they are more accessible than Hooks. Also resulting from this, a lot of
+existing React code is written to use class components and it might make sense to continue to do so rather than
+refactoring an entire codebase to use Hooks. 
+
+Additionally, since Hooks are a work in progress there are some advanced lifecycle methods that do not have a 
+Hooks equivalent yet (getSnapShotBeforeUpdate and componentDidCatch). The React docs also state that some third-
+party libraries may not be compatible with Hooks yet.
+
 - [ ] Name three lifecycle methods and their purposes.
+
+ComponentDidMount: this method is invoked immediately after a React component is inserted onto the DOM. It is often used to execute side effects such as network requests. 
+
+ComponentDidUpdate: this is called immediately after a component updates. It can be used for network requests
+or other side effects that are conditional on some previous state or props value.
+
+Render: this is a pure function that takes props and state and returns content to add to the DOM: mainly React
+elements and text content. They can also return booleans or arrays in order to render conditionally or return 
+multiple elements respectively.
+
 - [ ] What is the purpose of a custom hook?
+
+Custom hooks are used to combine React's built-in hooks and any functions of our own in order to avoid repetition and improve readability. This fits the React philosophy of creating reusable UI components. 
+
 - [ ] Why is it important to test our apps?
+
+Making mistakes during coding is inevitable. Testing allows bugs to be uncovered during or immediately after developing features, rather thah having them uncovered after shipping. Additionally, as codebases grow larger 
+and more complex they become more and more error prone, so by implementing testing from the get go it becomes possible to scale projects more safely.
 
 ## Project Set Up
 
@@ -52,7 +78,7 @@ Follow these steps for completing your project:
 
 Your finished project must include all of the following requirements:
 
-- [ ] Class component that fetches data from the server you now have running - the data can be fetched from `http://localhost:5000/api/players`
+- [ ] Class component that fetches data from the server you now have running - the data can be fetched from `k
 - [ ] Display the player data you receive from the API
 - [ ] Build a custom hook and use it in your app - this can be a localStorage hook, a fetch hook, a dark mode hook, or any other hook you would like
 - [ ] Write integration tests for your React components
